@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36003f29-4ee2-4124-b686-825792e3b334" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/WebCola.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebCola/examples/SPNGraph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebCola/examples/SPNGraph.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebCola/examples/graphdata/SPNGraph.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebCola/cola.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebCola/cola.min.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1agZzWPEBVVgNYnt7bRBrglI4KT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.buildTools.grunt.grunt-cli.package" value="$PROJECT_DIR$/node_modules/grunt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="ts.external.directory.path" value="C:\Users\Натали\Documents\GitHub\WebCola\node_modules\typescript\lib" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SPNGraph.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/WebCola/WebCola/examples/SPNGraph.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
+      <method v="2">
+        <option name="GruntBeforeRunTask" enabled="true">
+          <node-interpreter value="project" />
+          <gruntfile value="$PROJECT_DIR$/Gruntfile.js" />
+          <tasks>
+            <task value="browserify:spngraph" />
+          </tasks>
+          <envs />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt">
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36003f29-4ee2-4124-b686-825792e3b334" name="Default Changelist" comment="" />
+      <created>1587159459672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587159459672</updated>
+      <workItem from="1587159461746" duration="814000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/WebCola/test/gridrouting.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/test/gridrouting.js" />
+        <option value="$PROJECT_DIR$/WebCola/test/matrixperftest.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/test/matrixperftest.js" />
+        <option value="$PROJECT_DIR$/WebCola/test/tests.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/test/tests.js" />
+        <option value="$PROJECT_DIR$/WebCola/test/routingtests.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/test/routingtests.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/shortestpaths.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/shortestpaths.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/rbtree.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/rbtree.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/gridrouter.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/gridrouter.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/geom.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/geom.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/layout3d.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/layout3d.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/rectangle.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/rectangle.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/vpsc.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/vpsc.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/d3v4adaptor.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/d3v4adaptor.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/adaptor.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/adaptor.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/d3adaptor.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/d3adaptor.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/pqueue.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/pqueue.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/powergraph.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/powergraph.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/linklengths.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/linklengths.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/d3v3adaptor.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/d3v3adaptor.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/descent.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/descent.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/handledisconnected.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/handledisconnected.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/batch.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/batch.js" />
+        <option value="$PROJECT_DIR$/WebCola/src/layout.js.map" />
+        <option value="$PROJECT_DIR$/WebCola/src/layout.js" />
+        <option value="$PROJECT_DIR$/WebCola/examples/SPNGraph.js" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1117" y="360" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587159990745">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1117" y="360" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587159990745" />
+    <state width="1258" height="378" key="GridCell.Tab.0.bottom" timestamp="1587160290016">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="378" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290016" />
+    <state width="1258" height="378" key="GridCell.Tab.0.center" timestamp="1587160290015">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="378" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290015" />
+    <state width="1258" height="378" key="GridCell.Tab.0.left" timestamp="1587160290015">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="378" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290015" />
+    <state width="1258" height="378" key="GridCell.Tab.0.right" timestamp="1587160290015">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="378" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290015" />
+    <state width="1258" height="470" key="GridCell.Tab.1.bottom" timestamp="1587160290006">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="470" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290006" />
+    <state width="1258" height="470" key="GridCell.Tab.1.center" timestamp="1587160290005">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="470" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290005" />
+    <state width="1258" height="470" key="GridCell.Tab.1.left" timestamp="1587160290005">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="470" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290005" />
+    <state width="1258" height="470" key="GridCell.Tab.1.right" timestamp="1587160290005">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="470" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587160290005" />
+  </component>
+</project>

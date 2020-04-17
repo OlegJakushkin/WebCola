@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Petri net in dot with Cola</title>
+    <style>
+        @import url(../style.css);
+
+        .background {
+            stroke: gray;
+            stroke-width: 1px;
+            fill: white;
+        }
+
+        .node {
+            stroke: #000;
+            stroke-width: 1.5px;
+            cursor: move;
+            opacity: 0.9;
+        }
+
+        .group {
+            stroke: #fff;
+            stroke-width: 1.5px;
+            cursor: move;
+            opacity: 0.9;
+        }
+
+        .link {
+            stroke: #000;
+            stroke-width: 3px;
+            stroke-opacity: 0.9;
+            marker-end: url(#end-arrow);
+        }
+
+        .label {
+            fill: white;
+            font-family: Verdana;
+            font-size: 25px;
+            text-anchor: middle;
+            cursor: move;
+        }
+
+        .ghost {
+            fill: red;
+            fill-opacity: 0.5;
+            stroke: red;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+<a href="../index.html">cola.js home</a>
+<h1>Petri net in dot with Cola</h1>
+<p></p>
+<script src="../extern/d3.v3.js"></script>
+<script src="../cola.min.js"></script>
+<script src="SPNGraph.js"></script>
+
+</body>
+</html>

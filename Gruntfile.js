@@ -34,14 +34,33 @@ module.exports = function (grunt) {
           'WebCola/cola.js': ['dist/index.js']
         }
       },
+      spngraph: {
+        options: {
+          browserifyOptions: {
+            plugin: [
+              [
+                'tsify', {
+                target: 'es6',
+                allowJs: true
+              },
+              ]
+            ],
+            debug: true
+          },
+          transform: [["babelify", { "presets": ["es2015"] }]]
+        },
+        files: {
+          'WebCola/examples/SPNGraph.js': ['WebCola/examples/SPNGraph.ts'],
+        }
+      },
       examples: {
         options: {
           browserifyOptions: {
             plugin: [
               [
-                'tsify', { 
+                'tsify', {
                   target: 'es6',
-                  allowJs: true 
+                  allowJs: true
                 },
               ]
             ],
@@ -58,7 +77,8 @@ module.exports = function (grunt) {
           'WebCola/examples/pretrip.js': ['WebCola/examples/pretrip.ts'],
           'WebCola/examples/statemachinepowergraph.js': ['WebCola/examples/statemachinepowergraph.ts'],
           'WebCola/examples/tetrisbug.js': ['WebCola/examples/tetrisbug.ts'],
-          'WebCola/examples/vhybridize.js': ['WebCola/examples/vhybridize.ts']
+          'WebCola/examples/vhybridize.js': ['WebCola/examples/vhybridize.ts'],
+          'WebCola/examples/SPNGraph.js': ['WebCola/examples/SPNGraph.ts'],
         }
       },
       test: {
@@ -157,6 +177,7 @@ module.exports = function (grunt) {
   grunt.registerTask('nougly-notest', ['ts']);
   grunt.registerTask('test', ['ts:test','browserify:test','qunit']);
   grunt.registerTask('examples', ['browserify:examples']);
+  grunt.registerTask('SPNGraph', ['browserify:spngraph']);
   grunt.registerTask('docs', ['typedoc']);
   grunt.registerTask('full', ['default']);
 };
