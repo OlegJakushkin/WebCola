@@ -16,6 +16,8 @@ import * as d3scale from 'd3-scale'
 import * as d3zoom from 'd3-zoom'
 import * as d3color from 'd3-color'
 import * as graphlibDot from 'graphlib-dot'
+import {Rectangle} from "../index";
+import {List} from "linq-typescript";
 
 var width = 450,
     height = 350;
@@ -84,6 +86,8 @@ function petriGraph() {
 
         const nodes = [];
         const groups = [];
+        let edges = [];
+        var constrains = []
         let leavesCounter = 0;
         let groupsCounter = 0;
 
@@ -108,7 +112,8 @@ function petriGraph() {
                     id: groupsCounter++,
                     "name": name,
                     "leaves": itemsgroup,
-                    "groups": groupsGroup
+                    "groups": groupsGroup,
+                    "data": digraph.node(name)
                 };
                 groups.push(v);
             } else {
@@ -124,20 +129,42 @@ function petriGraph() {
                 "id": resultId,
                 "name": name,
                 "leaves": itemsgroup,
-                "groups": groupsGroup
+                "groups": groupsGroup,
+                "data": digraph.node(name)
             }
         }
 
         digraph.children().forEach(name => crowler(name));
         const dedges = <any[]>(digraph.edges());
-        let edges = [];
         for (let edge of dedges) {
             edges.push({source: digraph._nodes[edge.v].id, target: digraph._nodes[edge.w].id});
         }
+        var group_types = {
+            in : "public_in",
+            out : "public_out",
+            private : "private",
+            pattern : "pattern"
+        }
+
+        console.log(groups);
+        for (let group of groups) {
+            // Constrains all nodes on one vertical line
+            if(group.data.type == group_types.in || group.data.type == group_types.out ) {
+                if(group.leaves.length >= 2) {
+                    for (var i = 1; i < group.leaves.length; i++)
+                    {
+                        constrains.push({"axis":"x", "left":group.leaves[i-1], "right":group.leaves[i], "gap":0, "equality":"true"})
+                        constrains.push({"axis":"y", "left":group.leaves[i-1], "right":group.leaves[i], "gap":50, "equality":"true"})
+                    }
+                }
+            }
+        }
+
         let graph = {
             nodes: nodes,
             links: edges,
-            groups: groups
+            groups: groups,
+            constrains: constrains
         };
 
 
@@ -153,13 +180,13 @@ function petriGraph() {
         graph.groups.forEach(function (g) {
             g.padding = 20;
         });
-        console.log(graph)
         d3cola
             .nodes(graph.nodes)
             .links(graph.links)
             .groups(graph.groups)
-            .flowLayout('x', 40)
-            //.jaccardLinkLengths(50)
+            .constraints(graph.constrains)
+            .flowLayout('x', 50)
+            .jaccardLinkLengths(50)
             .start(15,15, 50, 10);
         var group = svg.selectAll(".group")
             .data(graph.groups)
@@ -169,6 +196,16 @@ function petriGraph() {
             .style("fill", function (d, i) {
                 return color(i);
             });
+
+        var patterns = svg.selectAll(".pattern")
+                                  .data(group.filter(function(d){return d.data.type == group_types.pattern && d.groups.length > 0;})[0])
+                                  .enter()
+                                  .append("rect")
+                                  .attr("class", "pattern")
+                                  .attr("rx", 8)
+                                  .attr("ry", 8)
+        console.log(group.filter(function(d){return d.data.type == group_types.pattern;})[0])
+
 
         var link = svg.selectAll(".link")
             .data(graph.links)
@@ -238,6 +275,22 @@ function petriGraph() {
                 "height": function (d) {
                     return d.bounds.height();
                 }});
+
+            patterns.each(function (d) {
+                var bbs = new List<Rectangle>( d.__data__.groups.map(g=>g.bounds));
+                d.setx = bbs.select(b=>b.x).min() + 40;
+                d.setX = bbs.select(b=>b.X).max() - 25;
+                d.sety = bbs.select(b=>b.y).min();
+                d.setY = bbs.select(b=>b.Y).max();
+                d.setwidth = d.setX - d.setx;
+                d.setheight = d.setY - d.sety;
+
+            });
+
+            patterns.attr("x", function (d) {     return d.setx;     })
+                   .attr("y", function (d) { return d.sety; })
+                    .attr("width", function (d) { return d.setwidth; })
+                    .attr("height", function (d) { return d.setheight; })
 
             link.each(function (d) {
                 let ah = 5;
