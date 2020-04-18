@@ -21,7 +21,6 @@ var width = 450,
     height = 350;
 
 var color = d3scale.scaleOrdinal(d3scale.schemeCategory20);
-var graphfile = "graphdata/n7e23.json";
 
 function makeSVG() {
     var outer = d3.select("body").append("svg")
@@ -99,10 +98,10 @@ function petriGraph() {
                 type = "subgraph";
                 children.forEach(function (childname) {
                     var g = crowler(childname)
-                    g.leaves.forEach(v => itemsgroup.push(v.id));
-                    g.groups.forEach(gr => groupsGroup.push(gr.id))
                     if (g.type == "node") {
                         itemsgroup.push(g.id);
+                    } else {
+                        groupsGroup.push(g.id);
                     }
                 });
                 v = {
@@ -154,7 +153,7 @@ function petriGraph() {
         graph.groups.forEach(function (g) {
             g.padding = 20;
         });
-
+        console.log(graph)
         d3cola
             .nodes(graph.nodes)
             .links(graph.links)

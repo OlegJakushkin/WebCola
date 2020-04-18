@@ -1,11 +1,29 @@
 digraph G {
-    subgraph {
-    u0[label="0" type="place"];
-    u1[label="1" type="transition"];
-    u2[label="2" type="place"];
+    subgraph pattern {
+        test_r[label="-1" type="place"];
+        subgraph public_in {
+            pi_p1[label="0" type="place"];
+            pi_p2[label="1" type="place"];
+        }
+        subgraph private {
+            pt1[label="2" type="transition"];
+            u0[label="3" type="place"];
+            u1[label="4" type="transition"];
+            u2[label="5" type="place"];
+        }
+        subgraph public_out {
+            po_t[label="6" type="transition"];
+        }
     }
-    u3[label="2" type="place"];
-    u4[label="2" type="place"];
-    u0 -> u1 [ label="()"];
-    u1 -> u2 [ label="()"];
+    u3[label="7" type="place"];
+    u4[label="8" type="place"];
+    u5[label="9" type="place"];
+
+    pi_p1 -> pt1 [label="e1"];
+    pi_p2 -> pt1 [label="e2"];
+    pt1-> u0 [label="e3"];
+    u0 -> u1 [label="e4"];
+    u1 -> u2 [label="e5"];
+    u2 -> po_t [label="e6"];
+    u3->u4 [label="e7"];
 }
