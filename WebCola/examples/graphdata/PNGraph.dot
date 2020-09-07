@@ -1,0 +1,49 @@
+digraph G {
+
+    src[label="src" type="place"];
+
+    subgraph {
+    p1[label="p" type="place"];
+    p2[label="p" type="place"];
+    p3[label="p" type="place"];
+}
+    subgraph {
+    l2[label="l" type="place" marks="1"];
+    l1[label="l" type="place" marks="2"];
+    t1[label="l" type="place"];
+}
+
+subgraph {
+    target1[label="target 1" type="place"];
+    target2[label="target 2" type="place"];
+    target3[label="target 3" type="place"];
+}
+
+subgraph {
+    sp1[label="sp" type="transition"];
+    sp2[label="sp" type="transition"];
+    sp3[label="sp" type="transition"];
+}
+subgraph {
+    lpt1[label="t" type="transition"];
+    lpt2[label="t" type="transition"];
+    lpt3[label="t" type="transition"];
+}
+subgraph {
+    pt1[label="t" type="transition"];
+    pt2[label="t" type="transition"];
+    pt3[label="t" type="transition"];
+}
+
+    transition[label="transition" type="transition"];
+
+    src->sp1;
+    sp1->p1;
+    p1->sp2;
+    sp2->p2;
+    p2->sp3;
+    sp3->p3;
+
+    l1->sp2;
+    l2->sp3;
+}

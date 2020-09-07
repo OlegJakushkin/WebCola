@@ -81,7 +81,7 @@ function petriGraph() {
 
     var svg = makeSVG();
 
-    d3.text("graphdata/SPNGraph.dot", function (f) {
+    d3.text("graphdata/PNGraph.dot", function (f) {
         const digraph = graphlibDot.read(f);
 
         const nodes = [];
